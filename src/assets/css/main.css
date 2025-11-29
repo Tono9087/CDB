@@ -203,18 +203,18 @@ h6 {
   }
 }
 
-/* Index Page Header
+/* Index Page Header - Siempre con fondo azul
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: #37517e;
   --heading-color: #ffffff;
   --nav-color: #ffffff;
 }
 
-/* Index Page Header on Scroll
+/* Index Page Header on Scroll - Mantener fondo azul
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(40, 58, 90, 0.9);
+  --background-color: #2596be;
 }
 
 /*--------------------------------------------------------------
@@ -1075,9 +1075,13 @@ section,
   opacity: 0;
 }
 
+.why-us .faq-container .faq-item .faq-content > * {
+  overflow: hidden;
+  min-height: 0;
+}
+
 .why-us .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
-  overflow: hidden;
 }
 
 .why-us .faq-container .faq-item .faq-icon {

@@ -20,7 +20,9 @@ const FAQ = ({ title, children, defaultOpen = false }) => {
         <span>{title}</span>
       </h3>
       <div className="faq-content">
-        {children}
+        <div style={{ overflow: 'hidden', minHeight: 0 }}>
+          {children}
+        </div>
       </div>
       <i 
         className={`faq-toggle bi bi-chevron-right ${isOpen ? 'rotated' : ''}`}
