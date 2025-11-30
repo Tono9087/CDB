@@ -4,8 +4,9 @@ import Button from '../components/Button';
 
 /**
  * Página de Cuestionario - Quiz interactivo sobre ciberseguridad
+ * @param {Function} setPage - Función para cambiar de página
  */
-const Cuestionario = () => {
+const Cuestionario = ({ setPage }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
@@ -162,7 +163,13 @@ const Cuestionario = () => {
                     Reintentar
                   </Button>
                   <Button 
-                    onClick={() => window.location.href = '#hero'} 
+                    onClick={() => {
+                      if (setPage) {
+                        setPage('Home');
+                      } else {
+                        window.location.href = '#hero';
+                      }
+                    }} 
                     variant="secondary"
                   >
                     Volver al inicio

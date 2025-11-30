@@ -36,10 +36,15 @@ const Header = ({ setPage, currentPage }) => {
     setIsMobileNavOpen((prev) => !prev);
   };
 
+  const closeMobileNav = () => {
+    setIsMobileNavOpen(false);
+  };
+
   const handleLogoClick = (e) => {
     e.preventDefault();
     setPage('Home');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMobileNav();
   };
 
   return (
@@ -63,22 +68,35 @@ const Header = ({ setPage, currentPage }) => {
                 to="Home"
                 setPage={setPage}
                 isActive={currentPage === 'Home'}
+                onNavigate={closeMobileNav}
               >
                 Inicio
               </NavLink>
             </li>
             <li>
-              <NavLink to="#about" setPage={setPage}>
+              <NavLink 
+                to="#about" 
+                setPage={setPage}
+                onNavigate={closeMobileNav}
+              >
                 Sobre nuestro objetivo
               </NavLink>
             </li>
             <li>
-              <NavLink to="#why-us" setPage={setPage}>
+              <NavLink 
+                to="#why-us" 
+                setPage={setPage}
+                onNavigate={closeMobileNav}
+              >
                 Prevenciones
               </NavLink>
             </li>
             <li>
-              <NavLink to="#simulacro" setPage={setPage}>
+              <NavLink 
+                to="#simulacro" 
+                setPage={setPage}
+                onNavigate={closeMobileNav}
+              >
                 Simulacro
               </NavLink>
             </li>
@@ -87,6 +105,7 @@ const Header = ({ setPage, currentPage }) => {
                 to="Cuestionario"
                 setPage={setPage}
                 isActive={currentPage === 'Cuestionario'}
+                onNavigate={closeMobileNav}
               >
                 Cuestionario
               </NavLink>

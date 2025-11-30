@@ -7,9 +7,10 @@ import React from 'react';
  * @param {Function} props.setPage - Función para cambiar de página
  * @param {boolean} props.isActive - Si el link está activo
  * @param {boolean} props.isExternal - Si es un link externo
+ * @param {Function} props.onNavigate - Callback cuando se navega (para cerrar menú móvil)
  * @param {React.ReactNode} props.children - Contenido del link
  */
-const NavLink = ({ to, setPage, isActive = false, isExternal = false, children }) => {
+const NavLink = ({ to, setPage, isActive = false, isExternal = false, onNavigate, children }) => {
   const handleClick = (e) => {
     if (isExternal) {
       // Link externo, abrir en nueva pestaña
@@ -28,6 +29,11 @@ const NavLink = ({ to, setPage, isActive = false, isExternal = false, children }
     } else {
       // Cambiar de página
       setPage(to);
+    }
+    
+    // Cerrar menú móvil si está abierto
+    if (onNavigate) {
+      onNavigate();
     }
   };
 

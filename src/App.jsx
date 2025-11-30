@@ -45,7 +45,7 @@ function App() {
       case 'Home':
         return <Home />;
       case 'Cuestionario':
-        return <Cuestionario />;
+        return <Cuestionario setPage={handlePageChange} />;
       default:
         return <Home />;
     }
