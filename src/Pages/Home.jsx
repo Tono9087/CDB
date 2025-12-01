@@ -4,10 +4,6 @@ import Section from '../components/Section';
 import FAQ from '../components/FAQ';
 import whyUsImg from '../assets/img/why-us.png';
 
-/**
- * Página principal - Home
- * Migrada desde MIT/index.html con correcciones ortográficas
- */
 const Home = () => {
   const handleGetStarted = () => {
     const element = document.querySelector('#about');
@@ -20,8 +16,8 @@ const Home = () => {
     <main className="main">
       <Hero onGetStarted={handleGetStarted} />
 
-      <Section 
-        id="about" 
+      <Section
+        id="about"
         title="Sobre la seguridad cibernética"
         className="about"
       >
@@ -45,7 +41,7 @@ const Home = () => {
         </div>
       </Section>
 
-      {/* Why Us Section */}
+
       <section id="why-us" className="section why-us light-background" data-builder="section">
         <div className="container-fluid">
           <div className="row gy-4">
@@ -61,7 +57,7 @@ const Home = () => {
               </div>
 
               <div className="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
-                <FAQ 
+                <FAQ
                   title="Maneras de prevenir una vulneración."
                   defaultOpen={true}
                 >
@@ -91,11 +87,11 @@ const Home = () => {
             </div>
 
             <div className="col-lg-5 order-1 order-lg-2 why-us-img">
-              <img 
-                src={whyUsImg} 
-                className="img-fluid" 
+              <img
+                src={whyUsImg}
+                className="img-fluid"
                 alt="Ilustración sobre seguridad digital"
-                data-aos="zoom-in" 
+                data-aos="zoom-in"
                 data-aos-delay="100"
                 loading="lazy"
               />

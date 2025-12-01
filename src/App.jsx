@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './Pages/Home';
 import Cuestionario from './Pages/Cuestionario';
+import PhishingTypes from './Pages/PhishingTypes';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './assets/css/main.css';
@@ -44,6 +45,8 @@ function App() {
     switch (currentPage) {
       case 'Home':
         return <Home />;
+      case 'PhishingTypes':
+        return <PhishingTypes />;
       case 'Cuestionario':
         return <Cuestionario setPage={handlePageChange} />;
       default:
@@ -56,10 +59,10 @@ function App() {
       <Header setPage={handlePageChange} currentPage={currentPage} />
       {renderPage()}
       <Footer setPage={handlePageChange} />
-      
-      <a 
-        href="#" 
-        id="scroll-top" 
+
+      <a
+        href="#"
+        id="scroll-top"
         className="scroll-top d-flex align-items-center justify-content-center"
         onClick={(e) => {
           e.preventDefault();

@@ -1,19 +1,14 @@
 import React from 'react';
 import NavLink from './NavLink';
 
-/**
- * Componente Footer con información de contacto y enlaces
- * @param {Object} props
- * @param {Function} props.setPage - Función para cambiar de página
- */
 const Footer = ({ setPage }) => {
   return (
     <footer id="footer" className="footer">
       <div className="container footer-top">
         <div className="row gy-4">
           <div className="col-lg-4 col-md-6 footer-about">
-            <a 
-              href="#hero" 
+            <a
+              href="#hero"
               className="d-flex align-items-center"
               onClick={(e) => {
                 e.preventDefault();
@@ -39,8 +34,8 @@ const Footer = ({ setPage }) => {
               </li>
               <li>
                 <i className="bi bi-chevron-right"></i>
-                <a 
-                  href="#about" 
+                <a
+                  href="#about"
                   onClick={(e) => {
                     e.preventDefault();
                     setPage('Home');
@@ -55,8 +50,8 @@ const Footer = ({ setPage }) => {
               </li>
               <li>
                 <i className="bi bi-chevron-right"></i>
-                <a 
-                  href="#why-us" 
+                <a
+                  href="#why-us"
                   onClick={(e) => {
                     e.preventDefault();
                     setPage('Home');
@@ -80,7 +75,7 @@ const Footer = ({ setPage }) => {
             <h4>Síguenos</h4>
             <p>Pronto verás más redes</p>
             <div className="social-links d-flex">
-              {/* Redes sociales se pueden agregar aquí en el futuro */}
+
             </div>
           </div>
         </div>
