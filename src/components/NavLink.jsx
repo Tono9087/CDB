@@ -13,6 +13,9 @@ import React from 'react';
 const NavLink = ({ to, setPage, isActive = false, isExternal = false, onNavigate, children }) => {
   const handleClick = (e) => {
     if (isExternal) {
+      if (onNavigate) {
+        onNavigate();
+      }
       // Link externo, abrir en nueva pestaña
       window.open(to, '_blank', 'noopener,noreferrer');
       return;
