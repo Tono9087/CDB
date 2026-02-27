@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './Pages/Home';
 import Cuestionario from './Pages/Cuestionario';
 import PhishingTypes from './Pages/PhishingTypes';
+import Simulacro from './Pages/Simulacro';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './assets/css/main.css';
@@ -49,6 +50,8 @@ function App() {
         return <PhishingTypes />;
       case 'Cuestionario':
         return <Cuestionario setPage={handlePageChange} />;
+      case 'Simulacro':
+        return <Simulacro setPage={handlePageChange} />;
       default:
         return <Home />;
     }

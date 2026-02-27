@@ -1,15 +1,7 @@
 import React from 'react';
 
-const NavLink = ({ to, setPage, isActive = false, isExternal = false, onNavigate, children }) => {
+const NavLink = ({ to, setPage, isActive = false, onNavigate, children }) => {
   const handleClick = (e) => {
-    if (isExternal) {
-      if (onNavigate) {
-        onNavigate();
-      }
-      window.open(to, '_blank', 'noopener,noreferrer');
-      return;
-    }
-
     e.preventDefault();
 
     if (to.startsWith('#')) {
@@ -36,6 +28,7 @@ const NavLink = ({ to, setPage, isActive = false, isExternal = false, onNavigate
 };
 
 export default NavLink;
+
 
 
 

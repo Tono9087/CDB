@@ -82,9 +82,9 @@ const Header = ({ setPage, currentPage }) => {
             </li>
             <li>
               <NavLink
-                to="https://cdb-simulation.vercel.app/"
+                to="Simulacro"
                 setPage={setPage}
-                isExternal
+                isActive={currentPage === 'Simulacro'}
                 onNavigate={closeMobileNav}
               >
                 Simulacro

@@ -1,9 +1,6 @@
 import React from 'react';
 import Card from '../components/Card';
-import cybersecurityImg from '../assets/img/cybersecurity.png';
-import cybersecurity2Img from '../assets/img/cybersecurity2.png';
-import whyUsImg from '../assets/img/why-us.png';
-import phishingImg from '../assets/img/Phishing.png';
+
 import smishingImg from '../assets/img/Smishing.png';
 import vishingImg from '../assets/img/Vishing.png';
 import pharmingImg from '../assets/img/Pharming.png';
