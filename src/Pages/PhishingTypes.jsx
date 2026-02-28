@@ -20,82 +20,82 @@ const PhishingTypes = () => {
             title: 'SPEAR PHISHING',
             image: spearPhishingImg,
             description: 'Este tipo de phishing se dirige hacia un grupo o tipo específico de personas, como el administrador de los sistemas de una empresa, se busca un beneficio de datos o dinero de estos lugares.',
-            scenario: 'Recibes un correo electrónico que parece ser de tu jefe directo, pidiéndote que revises un archivo adjunto urgente llamado "Reporte_Trimestral.pdf".',
-            question: '¿Qué haces ante la solicitud urgente de tu "jefe"?',
+            scenario: 'Recibes un correo que parece ser del departamento de TI de tu empresa, mencionando tu puesto actual y pidiendo que ingreses a un enlace de "Actualización de Políticas" para conservar tu acceso. La URL empieza con "it-update-tuempresa.es".',
+            question: '¿Qué haces ante la solicitud urgente de "TI"?',
             correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Spear Phishing. Aunque parece venir de alguien conocido, la urgencia y el archivo adjunto son tácticas para que lo abras sin pensar. Siempre verifica por otro medio (llamada, mensaje) si realmente enviaron ese correo.'
+            explanation: 'Es un ataque de Spear Phishing. Aunque incluyan tu nombre y puesto (datos que pudieron sacar de LinkedIn), la urgencia y el enlace extraño buscan robar tus credenciales. Comunícate con TI por un canal oficial (teléfono o chat interno) para validar.'
         },
         {
             title: 'SMISHING',
             image: smishingImg,
             description: 'Utiliza mensajes de texto para engañar a las personas y obtener información confidencial, como contraseñas, datos bancarios o información personal. Los estafadores se hacen pasar por organizaciones para que la víctima haga clic en enlaces maliciosos y proporcione sus datos.',
-            scenario: 'Te llega un SMS de "Tu Banco" que dice: "Alerta: Tu cuenta ha sido bloqueada. Para reactivarla, actualiza tus datos aquí: http://banco-seguro-alerta.com".',
+            scenario: 'Acabas de intentar iniciar sesión en tu cuenta bancaria desde un navegador nuevo. Segundos después, te llega un SMS de tu banco con un código de 6 dígitos de verificación, sin ningún enlace adicional.',
             question: '¿Cómo procedes con este mensaje de texto?',
-            correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Smishing. Los bancos nunca piden actualizar datos mediante enlaces en SMS. Evita hacer clic y revisa tu cuenta directamente en la app oficial o llamando al banco.'
+            correctAnswer: 'legitimo',
+            explanation: 'Es legítimo. Solicitaste el acceso tú mismo. El código es una medida de seguridad (autenticación de dos pasos) y, crucialmente, NO contiene enlaces externos que te pidan ingresar datos.'
         },
         {
             title: 'VISHING',
             image: vishingImg,
             description: 'Este tipo usa llamadas fraudulentas para engañar a las personas y que revelen información confidencial. Los atacantes se hacen pasar por organizaciones o personas de confianza para generar urgencia, miedo o sorpresa y obtener así datos personales y bancarios.',
-            scenario: 'Recibes una llamada de alguien que se identifica como soporte técnico de Microsoft indicando que tu PC tiene un virus y necesitan acceso remoto.',
+            scenario: 'Recibes una llamada de alguien que dice ser de prevención de fraudes de tu banco. Te informa sobre un cargo sospechoso y te pide que le dictes los números de tu tarjeta para "verificar tu identidad y cancelar la compra".',
             question: '¿Qué haces ante esta llamada telefónica?',
             correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Vishing clásico. Empresas como Microsoft u otras grandes corporaciones tecnológicas no realizan llamadas en frío para informar sobre problemas de tu equipo. Cuelga inmediatamente.'
+            explanation: 'Es un ataque de Vishing. El banco nunca te pedirá que dictes los números de tu tarjeta, contraseñas o PIN por teléfono. Cuelga inmediatamente y llama tú al banco usando el número al reverso de tu tarjeta.'
         },
         {
             title: 'PHARMING',
             image: pharmingImg,
             description: 'Es un tipo de fraude en internet donde te engañan para que visites una página web falsa sin que te des cuenta. Un ataque de pharming desvía tu conexión para llevarte a una copia idéntica del sitio, controlada por delincuentes. El objetivo es robar tu información personal cuando intentas iniciar sesión en la página falsa, haciendo que creas que estás en el sitio web real que querías visitar.',
-            scenario: 'Escribes correctamente la URL de tu banco en el navegador, pero la página carga muy lento y notas que no tiene el candado de seguridad (HTTPS), aunque visualmente es idéntica.',
+            scenario: 'Escribes correctamente la URL de tu banco en tu red wifi doméstica. La página carga rápidamente, ves el candado de seguridad (HTTPS) y la dirección web está bien escrita. Además, la página tiene todos tus datos pre-guardados en el dispositivo habitual.',
             question: '¿Deberías ingresar tus credenciales en este sitio?',
-            correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Pharming. A pesar de escribir la URL correcta, has sido redirigido a una página falsa. La falta de HTTPS y la lentitud son indicadores. No ingreses datos y revisa tu seguridad.'
+            correctAnswer: 'legitimo',
+            explanation: 'Es legítimo. Estás en una red segura, comprobaste el candado HTTPS y la URL es la correcta sin variaciones raras. Siempre es un buen hábito revisar la URL, pero si todo está en orden, puedes proceder con seguridad.'
         },
         {
             title: 'QUISHING',
             image: quishingImg,
             description: 'Es un tipo de ataque que utiliza códigos QR maliciosos para engañar a las personas y robar su información personal y/o financiera, o para instalar software malicioso en sus dispositivos. Estos QR redirigen al usuario a un sitio web fraudulento, suelen imitar a entidades, como bancos, servicios de entrega, restaurantes o empresas conocidas, para ganarse la confianza de la víctima.',
-            scenario: 'Encuentras un código QR en un parquímetro que dice "Escanea para pagar". Al escanearlo te dirige a una página que pide tus datos de tarjeta para continuar con el pago.',
+            scenario: 'Encuentras un código QR pegado como una pegatina brillante por encima del menú original de un restaurante turístico. Al escanearlo te dirige a una página web desconocida pidiendo un "registro rápido de tu cuenta de Google" antes de ver el menú.',
             question: '¿Escaneas e ingresas tu información?',
             correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Quishing. Los códigos QR en lugares públicos pueden ser reemplazados fácilmente por códigos fraudulentos. Usa la aplicación oficial o verifica cuidadosamente la URL a la que te dirige.'
+            explanation: 'Es un ataque de Quishing. Los ciberdelincuentes suelen pegar sus propios códigos QR encima de los legítimos en lugares públicos. Un restaurante nunca te pedirá credenciales de Google solo para ver el menú.'
         },
         {
             title: 'WHALING',
             image: whalingImg,
             description: 'Esta estafa por correo electrónico, conocida como whaling, se dirige a los altos ejecutivos de una empresa, como el jefe o el director general. Los estafadores se aprovechan de su autoridad para ordenarles, con urgencia y secretismo, que realicen acciones críticas como autorizar transferencias de grandes cantidades de dinero o enviar información confidencial de la empresa, evitando que la víctima sospeche.',
-            scenario: 'El CEO de la compañía recibe un correo muy sofisticado supuestamente del bufete de abogados de la empresa solicitando una transferencia confidencial e inmediata para cerrar un trato.',
+            scenario: 'El CEO de la compañía recibe un correo muy sofisticado supuestamente del bufete de abogados de la empresa solicitando una transferencia confidencial e inmediata para poder cerrar un trato "sin que los accionistas se enteren todavía".',
             question: '¿Se debe realizar la transferencia urgente?',
             correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Whaling. Está dirigido específicamente a altos cargos para autorizar operaciones críticas o financieras bajo presión. Siempre se deben seguir protocolos de verificación de múltiples pasos para este tipo de operaciones.'
+            explanation: 'Es un ataque de Whaling. Está dirigido específicamente a altos cargos para autorizar operaciones esquivando los controles de seguridad apelando al "secretismo". Siempre se deben seguir protocolos formales de verificación empresarial.'
         },
         {
             title: 'ANGLER PHISHING',
             image: anglerPhishingImg,
             description: 'Este fraude ocurre cuando delincuentes, usando perfiles falsos que imitan a una empresa en redes sociales, roban tu información personal y dinero. Para lograrlo, buscan quejas de clientes y se hacen pasar por atención al cliente para ofrecerte ayuda, enviándote a sitios web falsos a través de enlaces maliciosos.',
-            scenario: 'Te quejas en un tweet sobre un problema con tu vuelo. Rápidamente una cuenta que parece oficial de la aerolínea, pero sin la marca de verificación, te responde con un enlace para "resolver tu problema de reembolso".',
-            question: '¿Haces clic en el enlace para resolver el problema?',
-            correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Angler Phishing. Los atacantes monitorizan las redes sociales esperando a usuarios descontentos que buscan atención al cliente. Siempre debes verificar que te estás comunicando con cuentas oficiales verificadas.'
+            scenario: 'Contactas al soporte al cliente utilizando la sección de ayuda dentro de la aplicación móvil oficial de tu aerolínea preferida (logueado en tu cuenta). El agente que te asiste te pide el código de reserva de tu vuelo (PNR) para revisar el caso, pero ninguna contraseña.',
+            question: '¿Proporcionas el código para resolver el problema?',
+            correctAnswer: 'legitimo',
+            explanation: 'Es legítimo. Estás utilizando el canal de soporte integrado de la app oficial. Compartir tu código de reserva (no una contraseña, tarjeta o pin) con el canal oficial está bien y es necesario para que revisen tu caso.'
         },
         {
             title: 'POP-UP PHISHING',
             image: popUpPhishingImg,
             description: 'Esta técnica de estafa utiliza ventanas emergentes falsas que simulan ser avisos de seguridad o premios para engañar al usuario. El objetivo es lograr que la persona haga clic en ellas, lo cual la dirige a sitios web maliciosos, descarga programas dañinos o le roba información personal y financiera.',
-            scenario: 'Mientras navegas por internet buscando información, de repente aparece una ventana emergente bloqueando gran parte de la pantalla que dice: "¡Tu PC está infectada! Haz clic aquí para limpiar el sistema de inmediato."',
-            question: '¿Haces clic para limpiar el sistema?',
+            scenario: 'Mientras navegas por un blog de recetas, aparece una ventana emergente intermitente con muchos colores que dice: "¡Felicidades, eres el visitante 1,000,000! Haz clic aquí y pon tus datos de tarjeta para pagar solo el envío de tu nuevo iPhone."',
+            question: '¿Haces clic para reclamar el premio?',
             correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Pop-Up Phishing. Nunca hagas clic en estos avisos alarmistas del navegador. Cierra la pestaña o el navegador completo y realiza un análisis con tu software antivirus confiable instalado localmente.'
+            explanation: 'Es un clásico ataque de Pop-Up Phishing informales (Scam). Apela a la codicia exagerada regalando un dispositivo muy costoso para forzarte a pagar falsamente un "envío". Ciérralo de inmediato y evita esas páginas web.'
         },
         {
             title: 'CLONE PHISHING',
             image: clonePhishingImg,
             description: 'Es un tipo de ciberataque en el que los delincuentes copian un correo electrónico real que la víctima ha recibido anteriormente. Reemplazan los enlaces o archivos adjuntos originales por otros que contienen contenido peligroso. El propósito es engañar a la persona para que haga clic en un enlace falso o descargue un archivo con virus, aprovechando la confianza que ya tiene en el remitente original para robarle datos personales o infectar su dispositivo.',
-            scenario: 'Recibes un correo de tu proveedor de internet que es idéntico a una factura anterior que sabías era legítima. Sin embargo, este nuevo correo viene con una nota: "Estimado cliente, ha habido un error, por favor verifique la nueva factura adjunta" y trae un archivo .zip.',
+            scenario: 'Recibes un correo de tu proveedor de internet que es idéntico a una factura anterior. Sin embargo, este nuevo correo dice: "Estimado cliente, hubo un error técnico, por favor verifique urgentemente la nueva factura adjunta" y trae un archivo comprimido .ZIP con contraseña.',
             question: '¿Descargas y abres la nueva factura en .zip?',
             correctAnswer: 'phishing',
-            explanation: 'Es un ataque de Clone Phishing. Es una copia casi exacta de un correo legítimo previo que has recibido de esa misma entidad, pero el remitente la utiliza para enviar instrucciones diferentes o enlaces/archivos maliciosos. Siempre duda antes de abrir este tipo de correos replicados.'
+            explanation: 'Es un ataque de Clone Phishing. Es una copia de un correo legítimo que ha sido alterado. El remitente lo utiliza para enviar un virus encubierto (motivo por el cual cifran un .ZIP, para evadir antivirus de correo). Ante alertas urgentes o archivos .zip sospechosos, duda.'
         }
     ];
 
