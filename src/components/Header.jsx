@@ -64,24 +64,6 @@ const Header = ({ setPage, currentPage }) => {
             </li>
             <li>
               <NavLink
-                to="#about"
-                setPage={setPage}
-                onNavigate={closeMobileNav}
-              >
-                Sobre nuestro objetivo
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="#why-us"
-                setPage={setPage}
-                onNavigate={closeMobileNav}
-              >
-                Prevenciones
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="Simulacro"
                 setPage={setPage}
                 isActive={currentPage === 'Simulacro'}
